@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox Practice</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1 class="title">#100DaysOfCode Challenge <small>(Day 1 / CSS Flexbox Practice)</small></h1>
+    <h2 class="sub-title"> Properties for the Parent (container) element </h2>
+    <section class="section">
+        <h3>#1 Without Flexbox</h3>
+        <div class="container">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+            <div class="item">9</div>
+        </div>
+    </section>
+    <section class="section">
+        <h3>#2 Flexbox default</h3>
+        <p><code>{display: flex;}</code></p>
+        <div class="container" id="flexbox-1">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+            <div class="item">9</div>
+            <div class="item">10</div>
+            <div class="item">11</div>
+        </div>
+    </section>
+    <section class="section">
+        <h3>#3 Flexbox default</h3>
+        <p><code>{display: inline-flex;}</code></p>
+        <div class="container" id="flexbox-2">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+            <div class="item">9</div>
+            <div class="item">10</div>
+            <div class="item">11</div>
+        </div>
+    </section>
+    <section class="section">
+        <h3>#4 Flexbox direction</h3>
+        <p><code>{display: flex; flex-direction: row;}</code></p>
+        <div class="container" id="flexbox-3">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+            <div class="item">9</div>
+            <div class="item">10</div>
+            <div class="item">11</div>
+        </div>
+    </section>
+    <section class="section">
+        <h3>#5 Flexbox direction</h3>
+        <p><code>{display: flex; flex-direction: column;}</code></p>
+        <div class="container" id="flexbox-4">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+            <div class="item">9</div>
+            <div class="item">10</div>
+            <div class="item">11</div>
+        </div>
+    </section>
+    <section class="section">
+        <h3>#6 Flexbox direction (Reverse)</h3>
+        <p><code>{display: flex; flex-direction: row-reverse;}</code></p>
+        <div class="container" id="flexbox-5">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+            <div class="item">9</div>
+            <div class="item">10</div>
+            <div class="item">11</div>
+        </div>
+    </section>
+    <section class="section">
+        <h3>#7 Flexbox direction</h3>
+        <p><code>{display: flex; flex-direction: column-reverse;}</code></p>
+        <div class="container" id="flexbox-6">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+            <div class="item">9</div>
+            <div class="item">10</div>
+            <div class="item">11</div>
+        </div>
+    </section>
+    <section class="section">
+        <h3>#8 Flexbox wrap items</h3>
+        <p>By default flex items will all try to fit onto one line if items exceed the parent width.</p>
+        <p><code>{display: flex; flex-direction: row;}</code></p>
+        <div class="container" id="flexbox-7">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+            <div class="item">9</div>
+            <div class="item">10</div>
+            <div class="item">11</div>
+            <div class="item">12</div>
+            <div class="item">13</div>
+            <div class="item">14</div>
+            <div class="item">15</div>
+        </div>
+    </section>
+    <section class="section">
+        <h3>#9 Flexbox wrap items</h3>
+        <p>We can allow items to wrap as needed.</p>
+        <p><code>{display: flex; flex-direction: row; flex-wrap: wrap;}</code></p>
+        <div class="container" id="flexbox-8">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+            <div class="item">9</div>
+            <div class="item">10</div>
+            <div class="item">11</div>
+            <div class="item">12</div>
+            <div class="item">13</div>
+            <div class="item">14</div>
+            <div class="item">15</div>
+        </div>
+    </section>
+    <section class="section">
+        <h3>#10 Flexbox wrap reverse</h3>
+        <p><code>{display: flex; flex-direction: row; flex-wrap: wrap-reverse;}</code></p>
+        <div class="container" id="flexbox-9">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+            <div class="item">9</div>
+            <div class="item">10</div>
+            <div class="item">11</div>
+            <div class="item">12</div>
+            <div class="item">13</div>
+            <div class="item">14</div>
+            <div class="item">15</div>
+        </div>
+    </section>
+    <section class="section">
+        <h3>#11 Flexbox shorthand</h3>
+        <p><code>flex-flow</code> is a shorthand for the <code>flex-direction</code> and <code>flex-wrap</code></p>
+        <p><code>{display: flex; flex-flow: row wrap;}</code></p>
+        <div class="container" id="flexbox-10">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+            <div class="item">9</div>
+            <div class="item">10</div>
+            <div class="item">11</div>
+            <div class="item">12</div>
+            <div class="item">13</div>
+            <div class="item">14</div>
+            <div class="item">15</div>
+        </div>
+    </section>
+    <section class="section">
+        <h3>#12 Justify Content</h3>
+        <p><code>{display: flex; justify-content: center;}</code></p>
+        <div class="container" id="flexbox-11">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+        </div>
+    </section>
+    <section class="section">
+        <h3>#13 Justify Content</h3>
+        <p><code>{display: flex; justify-content: flex-end;}</code></p>
+        <div class="container" id="flexbox-12">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+        </div>
+    </section>
+    <section class="section">
+        <h3>#14 Justify Content</h3>
+        <p><code>{display: flex; justify-content: space-between;}</code></p>
+        <div class="container" id="flexbox-13">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+        </div>
+    </section>
+    <section class="section">
+        <h3>#15 Justify Content</h3>
+        <p><code>{display: flex; justify-content: space-around;}</code></p>
+        <div class="container" id="flexbox-14">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+        </div>
+    </section>
+    <section class="section">
+        <h3>#16 Justify Content</h3>
+        <p><code>{display: flex; justify-content: space-evenly;}</code></p>
+        <div class="container" id="flexbox-15">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+        </div>
+    </section>
+    <section class="section">
+        <h3>#17 Justify Content</h3>
+        <p><code>{display: flex; justify-content: flex-start;} /** Default **/</code></p>
+        <div class="container" id="flexbox-16">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+        </div>
+    </section>
+    <section class="section">
+        <h3>#18 Justify Content</h3>
+        <p><small>*start/end/left/right are not supported by Chrome yet.</small></p>
+        <p><code>{display: flex; justify-content: start;}</code></p>
+        <div class="container" id="flexbox-17">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+        </div>
+    </section>
+    <section class="section">
+        <h3>#19 Justify Content</h3>
+        <p><small>*start/end/left/right are not supported by Chrome yet.</small></p>
+        <p><code>{display: flex; justify-content: left;}</code></p>
+        <div class="container" id="flexbox-18">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+        </div>
+    </section>
+    <section class="section">
+        <h3>#20 Justify Content</h3>
+        <p><small>*start/end/left/right are not supported by Chrome yet.</small></p>
+        <p><code>{display: flex; justify-content: end;}</code></p>
+        <div class="container" id="flexbox-19">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+        </div>
+    </section>
+    <section class="section">
+        <h3>#21 Justify Content</h3>
+        <p><small>*start/end/left/right are not supported by Chrome yet.</small></p>
+        <p><code>{display: flex; justify-content: right;}</code></p>
+        <div class="container" id="flexbox-20">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+        </div>
+    </section>
+    <section class="section">
+        <h3>#22 Align Items</h3>
+        <p><code>{display: flex; height:300px; align-items: flex-start;}</code></p>
+        <p>Item 3 inline style - <code>style="height:150px;"</code></p>
+        <p>Item 5 inline style - <code>style="height:200px;"</code></p>
+        <div class="container" id="flexbox-21">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item" style="height:150px;">3</div>
+            <div class="item">4</div>
+            <div class="item" style="height:200px;">5</div>
+        </div>
+    </section>
+    <section class="section">
+        <h3>#23 Align Items</h3>
+        <p><code>{display: flex; height:300px; align-items: flex-end;}</code></p>
+        <p>Item 3 inline style - <code>style="height:150px;"</code></p>
+        <p>Item 5 inline style - <code>style="height:200px;"</code></p>
+        <div class="container" id="flexbox-22">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item" style="height:150px;">3</div>
+            <div class="item">4</div>
+            <div class="item" style="height:200px;">5</div>
+        </div>
+    </section>
+    <section class="section">
+        <h3>#24 Align Items</h3>
+        <p><code>{display: flex; height:300px; align-items: stretch;}</code></p>
+        <p>Item 3 inline style - <code>style="height:150px;"</code></p>
+        <p>Item 5 inline style - <code>style="height:200px;"</code></p>
+        <div class="container" id="flexbox-23">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item" style="height:150px;">3</div>
+            <div class="item">4</div>
+            <div class="item" style="height:200px;">5</div>
+        </div>
+    </section>
+    <section class="section">
+        <h3>#25 Align Items</h3>
+        <p><code>{display: flex; height:300px; align-items: center;}</code></p>
+        <p>Item 3 inline style - <code>style="height:150px;"</code></p>
+        <p>Item 5 inline style - <code>style="height:200px;"</code></p>
+        <div class="container" id="flexbox-24">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item" style="height:150px;">3</div>
+            <div class="item">4</div>
+            <div class="item" style="height:200px;">5</div>
+        </div>
+    </section>
+    <section class="section">
+        <h3>#26 Align Items</h3>
+        <p><code>{display: flex; height:300px; align-items: baseline;}</code></p>
+        <p>Item 3 inline style - <code>style="height:150px;"</code></p>
+        <p>Item 5 inline style - <code>style="height:200px;"</code></p>
+        <div class="container" id="flexbox-25">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item" style="height:150px;">3</div>
+            <div class="item">4</div>
+            <div class="item" style="height:200px;">5</div>
+        </div>
+    </section>
+    <section class="section">
+        <h3>#27 Align Content</h3>
+        <p><code>{display: flex; height:400px; flex-direction: row; flex-wrap: wrap; align-content: flex-start;}</code></p>
+        <p>Item 2 inline style - <code>style="width:300px;"</code></p>
+        <p>Item 5 inline style - <code>style="width:400px;"</code></p>
+        <div class="container" id="flexbox-26">
+            <div class="item">1</div>
+            <div class="item" style="width:400px">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item" style="width:400px">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+            <div class="item">9</div>
+            <div class="item">10</div>
+            <div class="item">11</div>
+            <div class="item">12</div>
+            <div class="item">13</div>
+            <div class="item">14</div>
+            <div class="item">15</div>
+        </div>
+    </section>
+    <section class="section">
+        <h3>#28 Align Content</h3>
+        <p><code>{display: flex; height:400px; flex-direction: row; flex-wrap: wrap; align-content: flex-end;}</code></p>
+        <p>Item 2 inline style - <code>style="width:300px;"</code></p>
+        <p>Item 5 inline style - <code>style="width:400px;"</code></p>
+        <div class="container" id="flexbox-27">
+            <div class="item">1</div>
+            <div class="item" style="width:400px">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item" style="width:400px">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+            <div class="item">9</div>
+            <div class="item">10</div>
+            <div class="item">11</div>
+            <div class="item">12</div>
+            <div class="item">13</div>
+            <div class="item">14</div>
+            <div class="item">15</div>
+        </div>
+    </section>
+    <section class="section">
+        <h3>#29 Align Content</h3>
+        <p><code>{display: flex; height:400px; flex-direction: row; flex-wrap: wrap; align-content: center;}</code></p>
+        <p>Item 2 inline style - <code>style="width:300px;"</code></p>
+        <p>Item 5 inline style - <code>style="width:400px;"</code></p>
+        <div class="container" id="flexbox-28">
+            <div class="item">1</div>
+            <div class="item" style="width:400px">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item" style="width:400px">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+            <div class="item">9</div>
+            <div class="item">10</div>
+            <div class="item">11</div>
+            <div class="item">12</div>
+            <div class="item">13</div>
+            <div class="item">14</div>
+            <div class="item">15</div>
+        </div>
+    </section>
+    <section class="section">
+        <h3>#30 Align Content</h3>
+        <p><code>{display: flex; height:400px; flex-direction: row; flex-wrap: wrap; align-content: center;}</code></p>
+        <p>Item 2 inline style - <code>style="width:300px;"</code></p>
+        <p>Item 3 inline style - <code>style="height:150px;"</code></p>
+        <p>Item 5 inline style - <code>style="width:400px;"</code></p>
+        <div class="container" id="flexbox-29">
+            <div class="item">1</div>
+            <div class="item" style="width:400px">2</div>
+            <div class="item" style="height:150px">3</div>
+            <div class="item">4</div>
+            <div class="item" style="width:400px">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+            <div class="item">9</div>
+            <div class="item">10</div>
+            <div class="item">11</div>
+            <div class="item">12</div>
+            <div class="item">13</div>
+            <div class="item">14</div>
+            <div class="item">15</div>
+        </div>
+    </section>
+    <section class="section">
+        <h3>#31 Align Content</h3>
+        <p><code>{display: flex; height:400px; flex-direction: row; flex-wrap: wrap; align-content: space-around;}</code></p>
+        <p>Item 2 inline style - <code>style="width:300px;"</code></p>
+        <p>Item 5 inline style - <code>style="width:400px;"</code></p>
+        <div class="container" id="flexbox-30">
+            <div class="item">1</div>
+            <div class="item" style="width:400px">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item" style="width:400px">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+            <div class="item">9</div>
+            <div class="item">10</div>
+            <div class="item">11</div>
+            <div class="item">12</div>
+            <div class="item">13</div>
+            <div class="item">14</div>
+            <div class="item">15</div>
+        </div>
+    </section>
+    <section class="section">
+        <h3>#32 Align Content</h3>
+        <p><code>{display: flex; height:400px; flex-direction: row; flex-wrap: wrap; align-content: space-between;}</code></p>
+        <p>Item 2 inline style - <code>style="width:300px;"</code></p>
+        <p>Item 5 inline style - <code>style="width:400px;"</code></p>
+        <div class="container" id="flexbox-31">
+            <div class="item">1</div>
+            <div class="item" style="width:400px">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item" style="width:400px">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+            <div class="item">9</div>
+            <div class="item">10</div>
+            <div class="item">11</div>
+            <div class="item">12</div>
+            <div class="item">13</div>
+            <div class="item">14</div>
+            <div class="item">15</div>
+        </div>
+    </section>
+    <h2 class="sub-title">Properties for child (item) elements</h2>
+    <section class="section">
+        <h3>#1 Order</h3>
+        <p><code>{display: flex; flex-direction: row; flex-wrap: wrap;}</code></p>
+        <p>Default {order: 0}</p>
+        <div class="container flexbox-all">
+            <div class="item" style="order:4;">1<p class="text">{order:4;}</p></div>
+            <div class="item" style="order:5;">2<p class="text">{order:5;}</p></div>
+            <div class="item" style="order:2;">3<p class="text">{order:2;}</p></div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item" style="order:1;">7<p class="text">{order:1;}</p></div>
+            <div class="item">8</div>
+            <div class="item">9</div>
+            <div class="item" style="order:3;">10<p class="text">{order:3;}</p></div>
+            <div class="item">11</div>
+            <div class="item">12</div>
+            <div class="item">13</div>
+            <div class="item">14</div>
+            <div class="item">15</div>
+        </div>
+    </section>
+    <section class="section">
+        <h3>#2 Flex Grow</h3>
+        <p><code>{display: flex; flex-direction: row; flex-wrap: wrap;}</code></p>
+        <div class="container flexbox-all">
+            <div class="item" style="flex-grow:1">1<p class="text">{flex-grow:1;}</p></div>
+            <div class="item" style="flex-grow:1">2<p class="text">{flex-grow:1;}</p></div>
+            <div class="item" style="flex-grow:1">3<p class="text">{flex-grow:1;}</p></div>
+            <div class="item" style="flex-grow:1">4<p class="text">{flex-grow:1;}</p></div>
+            <div class="item">5</div>
+            <div class="item" style="flex-grow:1">6<p class="text">{flex-grow:1;}</p></div>
+        </div>
+    </section>
+    <section class="section">
+        <h3>#3 Flex Grow</h3>
+        <p><code>{display: flex; flex-direction: row; flex-wrap: wrap;}</code></p>
+        <div class="container flexbox-all">
+            <div class="item" style="flex-grow:1">1<p class="text">{flex-grow:1;}</p></div>
+            <div class="item" style="flex-grow:1">2<p class="text">{flex-grow:1;}</p></div>
+            <div class="item" style="flex-grow:4">3<p class="text">{flex-grow:4;}</p></div>
+            <div class="item" style="flex-grow:1">4<p class="text">{flex-grow:1;}</p></div>
+            <div class="item">5</div>
+            <div class="item" style="flex-grow:1">6<p class="text">{flex-grow:1;}</p></div>
+        </div>
+    </section>
+    <section class="section">
+        <h3>#4 Flex Shrink</h3>
+        <p><code>{display: flex; flex-direction: row; flex-wrap: wrap;}</code></p>
+        <div class="container flexbox-all">
+            <div class="item" style="flex-shrink:4">1<p class="text">{flex-shrink:4;}</p></div>
+            <div class="item" style="flex-grow:1">2<p class="text">{flex-grow:1;}</p></div>
+            <div class="item" style="flex-grow:4">3<p class="text">{flex-grow:4;}</p></div>
+            <div class="item" style="flex-grow:1">4<p class="text">{flex-grow:1;}</p></div>
+            <div class="item">5</div>
+            <div class="item" style="flex-grow:1">6<p class="text">{flex-grow:1;}</p></div>
+        </div>
+    </section>
+    <section class="section">
+        <h3>#5 Flex Basis</h3>
+        <p><code>{display: flex; flex-direction: row; flex-wrap: wrap;}</code></p>
+        <div class="container flexbox-all">
+            <div class="item" >1</div>
+            <div class="item" >2</div>
+            <div class="item" style="flex-basis:auto">3</div>
+            <div class="item" >4</div>
+            <div class="item" style="flex-basis:0">5</div>
+            <div class="item" >6</div>
+        </div>
+    </section>
+    <section class="section">
+        <h3>#6 Align Self</h3>
+        <p><code>{display: flex; flex-direction: row; flex-wrap: wrap;}</code></p>
+        <div class="container" id="flexbox-32">
+            <div class="item" style="align-self:flex-start;">1<p class="text">{align-self:flex-start;}</p></div>
+            <div class="item" style="align-self:center;">2<p class="text">{align-self:center;}</p></div>
+            <div class="item" style="align-self:flex-end;">3<p class="text">{align-self:flex-end;}</p></div>
+            <div class="item" style="align-self:flex-end;">4<p class="text">{align-self:flex-end;}</p></div>
+            <div class="item" style="align-self:center;">5<p class="text">{align-self:center;}</p></div>
+            <div class="item" style="align-self:flex-start;">6<p class="text">{align-self:flex-start;}</p></div>
+        </div>
+    </section>
+</body>
+</html>
